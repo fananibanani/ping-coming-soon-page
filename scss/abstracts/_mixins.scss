@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+
+// Media queries with breakpoints using the $breakpoints map
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+
+
+
+
+// Styling for button-like elements
+$border-color: map-get($colors, 'gray');
+
+@mixin styled-border {
+  border: 1px solid $border-color;
+}
+
+@mixin field {
+  display: inline-block;
+  height: 2rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+  border-radius: 20px;
+  padding: 10px;
+}

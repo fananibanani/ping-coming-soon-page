@@ -1,0 +1,7 @@
+@use '../abstracts/fonts' as *;
+
+:root {
+    font-family: $font-stack;
+    font-weight: map-get($font-weights, 'light');
+    font-size: $default-font-size;
+}

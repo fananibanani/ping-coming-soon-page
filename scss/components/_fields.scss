@@ -1,0 +1,21 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+$button-color: colored('blue');
+
+.button {
+  @include field;
+  border: none;
+  background: $button-color;
+  color: colored('white');
+}
+
+.email-field {
+  @include field;
+  @include styled-border;
+}
+
+.social-links {
+  @extend .email-field;
+  width: 2rem;
+  color: $button-color;
+}

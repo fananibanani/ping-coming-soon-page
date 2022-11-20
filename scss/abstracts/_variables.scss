@@ -1,0 +1,23 @@
+
+// Colors
+$colors: (
+  'blue': hsl(223, 87%, 63%),
+  'pale-blue': hsl(223, 100%, 88%),
+  'light-red': hsl(354, 100%, 66%),
+  'gray': hsl(0, 0%, 59%),
+  'very-dark-blue': hsl(209, 33%, 12%),
+  'white': hsl(0, 0%, 100%),
+);
+
+
+
+
+
+
+// Breakpoints
+$breakpoints: (
+  'small': (min-width: 480px),
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);
