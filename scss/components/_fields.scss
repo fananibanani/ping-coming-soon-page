@@ -1,12 +1,12 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/functions' as *;
-$button-color: colored('blue');
+$button-color: color-it('blue');
 
 .button {
   @include field;
   border: none;
   background: $button-color;
-  color: colored('white');
+  color: color-it('white');
 }
 
 .email-field {

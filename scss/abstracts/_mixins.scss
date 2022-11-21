@@ -1,4 +1,5 @@
-@use '../abstracts/variables' as *;
+@use 'variables' as *;
+@use 'functions' as *;
 
 // Media queries with breakpoints using the $breakpoints map
 @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
@@ -16,7 +17,7 @@
 
 
 // Styling for button-like elements
-$border-color: map-get($colors, 'gray');
+$border-color: color-it('gray');
 
 @mixin styled-border {
   border: 1px solid $border-color;

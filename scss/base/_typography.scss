@@ -1,7 +1,8 @@
 @use '../abstracts/fonts' as *;
+@use '../abstracts/functions' as *;
 
 :root {
     font-family: $font-stack;
-    font-weight: map-get($font-weights, 'light');
+    font-weight: font-weight('light');
     font-size: $default-font-size;
 }

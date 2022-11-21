@@ -1,9 +1,22 @@
 @use 'variables' as *;
+@use 'fonts' as *;
 
-// Colors
-@function colored($func-color, $func-colors: $colors) {
+// Return the value of the given color name from the $colors map
+@function color-it($func-color, $func-colors: $colors) {
     @if map-has-key($func-colors, $func-color) {
     $func-color: map-get($func-colors, $func-color);
   }
   @return $func-color;
+}
+
+
+
+
+
+// Return the value of the given font weight from the $font-weights map
+@function font-weight($weight, $func-font-weights: $font-weights) {
+    @if map-has-key($func-font-weights, $weight) {
+    $weight: map-get($func-font-weights, $weight);
+  }
+  @return $weight;
 }
