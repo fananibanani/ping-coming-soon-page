@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+.form__elem {
+    width: 80%;
+    padding: 0.6rem 1rem;
+    font-size: 0.6rem;
+    margin: 0.3rem auto;
+}
+
+.form__button {
+    border: none;
+    background: $button-color;
+    color: color-it('white');
+    font-weight: font-weight('semi-bold');
+    box-shadow: 0 0.5rem 1rem color-it('pale-blue');
+
+    &:hover {
+        background: darken($button-color, 5%);
+    }
+
+    @include mq(medium) {
+        width: 30%;
+        margin-left: 0.6rem;
+    }
+}
+
+.form__email {
+    @include styled-border;
+
+    &:focus {
+        outline: none;
+        border-color: $button-color;
+        box-shadow: inset 0 0 0.5rem color-it('pale-blue');
+    }
+
+    @include mq(medium) {
+        width: 60%;
+    }
+}

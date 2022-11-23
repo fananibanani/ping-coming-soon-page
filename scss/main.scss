@@ -2,5 +2,10 @@
 @use './base/helpers';
 @use './base/typography';
 
-@use './components/img';
 @use './components/fields';
+@use './components/form';
+@use './components/img';
+@use './components/social-links';
+
+@use './layout/header';
+@use './layout/footer';

@@ -1,14 +1,31 @@
 @use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.2s;
 }
 
 body {
-    width: 90%;
-    margin: 0 auto;
     background: color-it('white');
     text-align: center;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+
+    @include mq(small) {
+        max-width: 70%;
+    }
+
+    @include mq(medium) {
+        max-width: 60%;
+    }
+
+    @include mq(large) {
+        max-width: 50%;
+    }
 }

@@ -3,13 +3,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.2s;
 }
 
 body {
-  width: 90%;
-  margin: 0 auto;
   background: hsl(0deg, 0%, 100%);
   text-align: center;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 70%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .container {
+    max-width: 60%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 50%;
+  }
 }
 
 .sr-only {
@@ -27,35 +46,122 @@ body {
   font-size: 20px;
 }
 
-.illustration {
-  width: 100%;
-}
-
-.button {
+.field {
   display: inline-block;
-  height: 2rem;
   font-family: inherit;
   font-size: 0.7rem;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
+.form__elem {
+  width: 80%;
+  padding: 0.6rem 1rem;
+  font-size: 0.6rem;
+  margin: 0.3rem auto;
+}
+
+.form__button {
   border: none;
-  background: hsl(223deg, 87%, 63%);
+  background: #376cf1;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  box-shadow: 0 0.5rem 1rem hsl(223deg, 100%, 88%);
+}
+.form__button:hover {
+  background: #1f5aef;
+}
+@media screen and (min-width: 800px) {
+  .form__button {
+    width: 30%;
+    margin-left: 0.6rem;
+  }
+}
+
+.form__email {
+  border: 1px solid hsl(223deg, 100%, 88%);
+}
+.form__email:focus {
+  outline: none;
+  border-color: #376cf1;
+  box-shadow: inset 0 0 0.5rem hsl(223deg, 100%, 88%);
+}
+@media screen and (min-width: 800px) {
+  .form__email {
+    width: 60%;
+  }
+}
+
+.illustration {
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.social__links {
+  width: 1.5rem;
+  color: #376cf1;
+  border: 1px solid hsl(223deg, 100%, 88%);
+}
+.social__links:hover {
+  border: #376cf1;
+  background: #376cf1;
   color: hsl(0deg, 0%, 100%);
 }
 
-.email-field, .social-links {
-  display: inline-block;
-  height: 2rem;
-  font-family: inherit;
-  font-size: 0.7rem;
-  border-radius: 20px;
-  padding: 10px;
-  border: 1px solid hsl(0deg, 0%, 59%);
+header {
+  margin: 3rem auto 1rem auto;
 }
 
-.social-links {
-  width: 2rem;
-  color: hsl(223deg, 87%, 63%);
+.header__logo {
+  width: 15%;
+  margin: 0 auto 2rem auto;
+}
+
+.header__title {
+  font-size: 20px;
+  font-weight: 300;
+  color: #8a8a8a;
+  margin-bottom: 0.7rem;
+}
+@media screen and (min-width: 480px) {
+  .header__title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header__title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .header__title {
+    font-size: 2rem;
+  }
+}
+
+.header__title--strong {
+  font-weight: 700;
+  color: hsl(209deg, 33%, 12%);
+}
+
+.header__text {
+  font-size: 0.7rem;
+}
+@media screen and (min-width: 800px) {
+  .header__text {
+    font-size: 1rem;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 0.5rem;
+  margin: 1rem auto;
 }
 
 /*# sourceMappingURL=main.css.map */

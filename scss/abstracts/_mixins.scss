@@ -17,17 +17,8 @@
 
 
 // Styling for button-like elements
-$border-color: color-it('gray');
+$border-color: color-it('pale-blue');
 
 @mixin styled-border {
   border: 1px solid $border-color;
-}
-
-@mixin field {
-  display: inline-block;
-  height: 2rem;
-  font-family: inherit;
-  font-size: 0.7rem;
-  border-radius: 20px;
-  padding: 10px;
 }

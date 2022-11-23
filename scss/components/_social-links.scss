@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
+
+.social__links {
+    width: 1.5rem;
+    color: $button-color;
+    @include styled-border;
+
+    &:hover {
+        border: $button-color;
+        background: $button-color;
+        color: color-it('white');
+    }
+}

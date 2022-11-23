@@ -1,21 +1,7 @@
-@use '../abstracts/mixins' as *;
-@use '../abstracts/functions' as *;
-$button-color: color-it('blue');
-
-.button {
-  @include field;
-  border: none;
-  background: $button-color;
-  color: color-it('white');
-}
-
-.email-field {
-  @include field;
-  @include styled-border;
-}
-
-.social-links {
-  @extend .email-field;
-  width: 2rem;
-  color: $button-color;
+.field {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.7rem;
+  border-radius: 1rem;
+  padding: 0.3rem;
 }

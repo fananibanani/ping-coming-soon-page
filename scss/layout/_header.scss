@@ -1,0 +1,46 @@
+@use '../abstracts/fonts' as *;
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+
+$darker-gray: darken(color-it('gray'), 5%);
+
+header {
+    margin: 3rem auto 1rem auto;
+}
+
+.header__logo {
+    width: 15%;
+    margin: 0 auto 2rem auto;
+}
+
+.header__title {
+    font-size: $default-font-size;
+    font-weight: font-weight('light');
+    color: $darker-gray;
+    margin-bottom: 0.7rem;
+
+    @include mq(small) {
+        font-size: 1.25rem;
+    }
+
+    @include mq(medium) {
+        font-size: 1.5rem;
+    }
+
+    @include mq(large) {
+        font-size: 2rem;
+    }
+}
+
+.header__title--strong {
+    font-weight: font-weight('bold');
+    color: color-it('very-dark-blue');
+}
+
+.header__text {
+    font-size: 0.7rem;
+
+    @include mq(medium) {
+        font-size: 1rem;
+    }
+}

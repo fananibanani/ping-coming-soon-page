@@ -31,58 +31,49 @@
   </head>
 
   <body>
-    <header>
-      <img src="./images/logo.svg" alt="" />
-
-      <h1>We are launching soon!</h1>
-
-      <p>Subscribe and get notified</p>
-    </header>
-
-
-    <main>
-      <form action="#" method="post" autocomplete="on">
-        <label for="email" class="sr-only">
-          Enter your email address here:
-        </label>
-        <input
-          type="email"
-          id="email"
-          class="email-field"
-          placeholder="Your email address..."
-          required
+    <div class="container">
+      <header>
+        <img src="./images/logo.svg" alt="" class="header__logo" />
+        <h1 class="header__title">We are launching <span class="header__title--strong">soon!</span></h1>
+        <p class="header__text">Subscribe and get notified</p>
+      </header>
+      <main>
+        <form action="#" method="post" autocomplete="on">
+          <label for="email" class="sr-only">
+            Enter your email address here to subscribe:
+          </label>
+          <input
+            type="email"
+            id="email"
+            class="form__email form__elem | field"
+            placeholder="Your email address..."
+            required
+          />
+          <button type="submit" class="form__button form__elem | field">Notify Me</button>
+        </form>
+        <img
+          src="./images/illustration-dashboard.png"
+          alt=""
+          class="illustration"
         />
-
-        <button type="submit" class="button">Notify Me</button>
-      </form>
-
-      <img 
-        src="./images/illustration-dashboard.png"
-        alt=""
-        class="illustration"
-      />
-    </main>
-
-
-    <footer>
-      <p>
-        <a href="#" class="social-links">
-          <span class="sr-only">Facebook</span>
-          <i class="fa-brands fa-facebook-f"></i>
-        </a>
-
-        <a href="#" class="social-links">
-          <span class="sr-only">Twitter</span>
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-
-        <a href="#" class="social-links">
-          <span class="sr-only">Instagram</span>
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </p>
-
-      <p>&copy; Copyright Ping. All rights reserved.</p>
-    </footer>
+      </main>
+      <footer>
+        <p class="social">
+          <a href="#" class="social__links | field">
+            <span class="sr-only">Facebook</span>
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social__links | field">
+            <span class="sr-only">Twitter</span>
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="social__links | field">
+            <span class="sr-only">Instagram</span>
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </p>
+        <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>
